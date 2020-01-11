@@ -24,6 +24,7 @@
             <TextField fx:id="txtUrl" layoutX="14.0" layoutY="53.0" prefHeight="32.0" prefWidth="403.0" promptText="enter input URL here" />
             <TextField fx:id="txtCount" editable="false" layoutX="442.0" layoutY="315.0" prefHeight="32.0" prefWidth="129.0" text="0" />
             <Text layoutX="450.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="extracted emails" />
+            <Button fx:id="btnReset" layoutX="442.0" layoutY="494.0" mnemonicParsing="false" onAction="#onClickReset" text="Reset All" />
          </children>
       </AnchorPane>
    </children>

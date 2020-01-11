@@ -22,6 +22,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.ContextMenuEvent;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
@@ -45,7 +47,11 @@ public class FXML_ExtractorController implements Initializable {
     @FXML
     private TextField txtCount;
 
-     int counter = 0;
+    int counter = 0;
+    @FXML
+    private Button btnReset;
+
+
     /**
      * Initializes the controller class.
      */
@@ -57,7 +63,6 @@ public class FXML_ExtractorController implements Initializable {
     @FXML
     private boolean onClickExtract(ActionEvent event) {
         String input = txtInput.getText();
-       
 
         if ((input.trim().length() == 0) || (input == "") || (input.trim().isEmpty())) {
 
@@ -120,5 +125,22 @@ public class FXML_ExtractorController implements Initializable {
             System.out.println("Unable to read URL due to Unknown Host..");
         }
     }
+
+    @FXML
+    private void onClickReset(ActionEvent event) {
+        counter = 0;
+        txtInput.setText("");
+        txtOutput.setText("");
+        txtCount.setText("0");
+        txtUrl.setText("");
+        Alert alert1 = new Alert(Alert.AlertType.INFORMATION);
+        alert1.setTitle("Information Dialog");
+        alert1.setHeaderText(null);
+        alert1.setContentText("Succesfully Reset.");
+
+        alert1.showAndWait();
+    }
+
+
 
 }
