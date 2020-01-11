@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="AnchorPane" prefHeight="577.0" prefWidth="600" style="-fx-background-color: C1D9F9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="emailextractor.FXML_ExtractorController">
+    <stylesheets>
+        <URL value="@darktheme.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="572.0" prefWidth="600.0" style="-fx-background-color: ffc39a;" styleClass="mainFxmlClass">
+         <children>
+            <Label layoutX="249.0" layoutY="6.0" text="EMAIL EXTACTOR" />
+            <TextArea fx:id="txtInput" layoutX="15.0" layoutY="97.0" prefHeight="200.0" prefWidth="403.0" promptText="enter input here" />
+            <TextArea fx:id="txtOutput" layoutX="15.0" layoutY="315.0" prefHeight="243.0" prefWidth="403.0" promptText="output shows here" />
+            <Button fx:id="btnExtract" layoutX="430.0" layoutY="97.0" mnemonicParsing="false" onAction="#onClickExtract" text="Extract Emails" />
+            <Button fx:id="btnUrl" layoutX="423.0" layoutY="53.0" mnemonicParsing="false" onAction="#onClickExtractFromUrl" text="Get URL Emails" />
+            <TextField fx:id="txtUrl" layoutX="14.0" layoutY="53.0" prefHeight="32.0" prefWidth="403.0" promptText="enter input URL here" />
+            <TextField fx:id="txtCount" editable="false" layoutX="442.0" layoutY="315.0" prefHeight="32.0" prefWidth="129.0" text="0" />
+            <Text layoutX="450.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="extracted emails" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
